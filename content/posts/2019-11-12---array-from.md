@@ -2,7 +2,7 @@
 title: "[].slice.call(arguments)와 Array.from()"
 date: "2019-11-11T05:46:32.169Z"
 template: "post"
-draft: false
+draft: true
 slug: "/posts/array-from/"
 category: "JavaScript"
 tags:

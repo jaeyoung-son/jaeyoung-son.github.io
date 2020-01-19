@@ -32,7 +32,7 @@ const Tags = ({ tags, tagSlugs, inSidebar }: Props) => (
           </Link>
         </li>
       ))}
-      {['wecode', '위코드', '코딩부트캠프', 'it학원', '코딩학원'].map((name) => (
+      {['wecode', '재영블로그'].map((name) => (
         <li
           className={cx(
             styles['tags__list-item'],

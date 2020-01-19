@@ -1,11 +1,11 @@
 ---
-title: "sudo 없이 npm install 하기"
-date: "2019-11-14T10:43:32.169Z"
+title: "안녕하세요 재영입니다."
+date: "2018-01-14T10:43:32.169Z"
 template: "post"
-draft: true
-slug: "/posts/npm-install-without-sudo/"
-category: "terminal"
-description: "매번 install 할 때 sudo 붙이기 귀찮다."
+draft: false
+slug: "/posts/helloJY"
+category: "hello git"
+description: "재영이"
 tags:
   - "terminal"
 ---
