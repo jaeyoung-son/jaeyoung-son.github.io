@@ -2,7 +2,7 @@
 title: "안녕하세요 재영입니다."
 date: "2018-01-14T10:43:32.169Z"
 template: "post"
-draft: false
+draft: true
 slug: "/posts/helloJY"
 category: "hello git"
 description: "재영이"
