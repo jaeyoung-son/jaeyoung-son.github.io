@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = {
-  url: 'https://yeri-kim.github.io/',
-  title: 'Blog by Yeri',
+  url: 'https://jaeyoung-son.github.io/',
+  title: 'Blog by Jaeyoung',
   subtitle: 'hello world',
   copyright: '',
   disqusShortname: 'github-io-12',
@@ -26,13 +26,13 @@ module.exports = {
     */
   ],
   author: {
-    name: 'Yeri',
-    photo: '/profile.png',
+    name: 'Jaeyoung',
+    photo: '/jycat.png',
     bio: '',
     contacts: {
-      email: 'yerikim1028@gmail.com',
-      github: 'Yeri-Kim',
-      linkedIn: 'yeri-kim-1028'
+      email: 'zkqkzl2@gmail.com',
+      github: 'Jaeyoung-Son',
+      linkedIn: ''
     }
   }
 };
