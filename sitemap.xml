@@ -11,9 +11,10 @@
 <url> <loc>https://jaeyoung-son.github.io/posts/styled-component/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/posts/redux_basic/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/posts/redux_practice/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeyoung-son.github.io/posts/sec_project/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/posts/Vue.js/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/posts/introduce/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeyoung-son.github.io/posts/webpack/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeyoung-son.github.io/posts/sec_project/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/pages/contacts/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/tag/vue</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -24,6 +25,7 @@
 <url> <loc>https://jaeyoung-son.github.io/tag/react</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/tag/redux</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/tag/styled-component</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeyoung-son.github.io/tag/webpack</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/category/vue</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/category/class</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/category/http</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -32,6 +34,8 @@
 <url> <loc>https://jaeyoung-son.github.io/category/react</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/category/redux</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/category/styled-component</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeyoung-son.github.io/category/webpack</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeyoung-son.github.io/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeyoung-son.github.io/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
