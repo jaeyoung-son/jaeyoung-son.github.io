@@ -150,3 +150,19 @@ return (
 ```
 
 각 스타일드컴포넌트에 값 전달하며 에러메시지 조건부로 렌더링
+
+```js
+const setValidationResult = (key, data) => {
+    let nextState = errors.filter(error => error.key !== key);
+    if (data) {
+      nextState = nextState.concat({
+        key,
+        message: data,
+      });
+    }
+    setErrors(prevState => {
+      return [...prevState, ...nextState];
+    });
+```
+
+이전 값을 설정하고 다음값에서setError를 할때 이전 값이 반영되기 전에 다음 함수가 실행이 되서 밀렸다. setError에서 바로 값을 바꾸는 것이 아니라 인자에 객체가 아닌 함수를 넣어서 이전값을 인자로 받고 이전값에 다음 값을 더해주었다.
