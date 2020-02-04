@@ -79,13 +79,30 @@ const setValidationResult = (key, data) => {
 조건에따라 setErrors 해주는 함수 정의
 
 ```js
-  const checkBeforeSubmit = () => {
-    for (let key in validators) {
-      const validator = validators[key];
+const checkBeforeSubmit = () => {
+  const submitErrors = Object.entries(validators).reduce(
+    (prev, [key, validator]) => {
       const value = inputState[key];
       const result = validator(value, inputState);
-      setValidationResult(key, result);
-    }
+
+      if (!result) return prev;
+
+      return prev.concat({
+        key,
+        message: result
+      });
+    },
+    []
+  );
+
+  setErrors(submitErrors);
+
+  if (submitErrors.length) {
+    return;
+  }
+
+  // ....다음 동작들
+};
 ```
 
 제출 전 확인하는 함수 정의
