@@ -58,30 +58,30 @@ tags:
 
 - ### 기업협업 인턴쉽 : Brandi 어드민페이지 클론 ( 20.01.28 ~ 20.02.21 )
 
-  로그인 및 회원가입페이지, 셀러정보, 샐러목록 페이지
-  CKEditor 를 사용하여 상품등록 에디터 구현
-  Webpack 을 활용한 빌드
-  Material-UI 사용
-  Crypto.js 를 사용하여 아이디 저장 기능 구현
-  전역 상태관리 Redux 활용
+  로그인 및 회원가입페이지, 셀러정보, 샐러목록 페이지  
+  CKEditor 를 사용하여 상품등록 에디터 구현  
+  Webpack 을 활용한 빌드  
+  Material-UI 사용  
+  Crypto.js 를 사용하여 아이디 저장 기능 구현  
+  전역 상태관리 Redux 활용  
   params 속성을 활용하여 유동적인 리스트 구현
 
 - ### 2차 프로젝트 : MangoPlate 클론 ( 20.01.06 ~ 20.01.17)
 
   ![](https://images.velog.io/images/zkqkzl2/post/94b4a672-062d-41fe-9ae0-4a5350528fc1/%E1%84%86%E1%85%A1%E1%86%BC%E1%84%91%E1%85%B3%E1%86%AF%E1%84%8F%E1%85%A9%E1%86%AF%E1%84%85%E1%85%A1%E1%84%8C%E1%85%AE.png)
-  레스토랑 상세페이지, 탑리스트 및 맛집리스트 페이지 담당
-  React-hooks를 활용한 함수형 컴포넌트 사용
-  Styled-component를 이용해 스타일 및 이벤트 적용
-  React-redux를 사용해 토스트창 구현
-  Styled-component로 이미지 캐러셀 기능 구현
+  레스토랑 상세페이지, 탑리스트 및 맛집리스트 페이지 담당  
+  React-hooks를 활용한 함수형 컴포넌트 사용  
+  Styled-component를 이용해 스타일 및 이벤트 적용  
+  React-redux를 사용해 토스트창 구현  
+  Styled-component로 이미지 캐러셀 기능 구현  
   백엔드와 API호출하며 더보기 기능 구현
 
 - ### 1차 프로젝트 : SpaceCloud 클론 ( 19.12.23 ~ 20.01.03)
   ![](https://images.velog.io/images/zkqkzl2/post/3311e85c-2e15-440f-9e39-462b7d2b9bce/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%8F%E1%85%A9%E1%86%AF%E1%84%85%E1%85%A1%E1%84%8C%E1%85%AE.png)
-  로그인 및 회원가입 페이지, 공간정보 상세페이지 담당
-  class형 컴포넌트를 사용 & 라이프사이클 메소드를 통한 api연결
-  css를 이용한 모달기능 구현
-  로그인 페이지 유저 access_token 관리
-  QnA부분 pagenation 기능구현
-  React calendar 라이브러리를 활용한 예약기능 구현
+  로그인 및 회원가입 페이지, 공간정보 상세페이지 담당  
+  class형 컴포넌트를 사용 & 라이프사이클 메소드를 통한 api연결  
+  css를 이용한 모달기능 구현  
+  로그인 페이지 유저 access_token 관리  
+  QnA부분 pagenation 기능구현  
+  React calendar 라이브러리를 활용한 예약기능 구현  
   React Router 사용
