@@ -16,11 +16,11 @@ tags:
 사용자들이 이용하며 즐거움을 느낄 수 있는 웹을 만들고 싶어합니다.
 항상 겸손한 자세로 배우려는 준비가 되어있습니다.
 
-> |            |                                 |
-> | :--------: | ------------------------------- |
-> | **Github** | https://github.com/jaeyoung-son |
-> |  **Blog**  | https://jaeyoung-son.github.io  |
-> | **E-mail** | zkqkzl2@gmail.com               |
+|            |                                 |
+| :--------: | ------------------------------- |
+| **Github** | https://github.com/jaeyoung-son |
+|  **Blog**  | https://jaeyoung-son.github.io  |
+| **E-mail** | zkqkzl2@gmail.com               |
 
 ## 기술 이력
 
@@ -33,7 +33,7 @@ tags:
 
 ### Javascript
 
-- ES5와 ES6 이후의 문법에 익숙합니다.텍스트
+- ES5와 ES6 이후의 문법에 익숙합니다.
 
 ### React
 
