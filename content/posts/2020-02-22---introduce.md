@@ -1,6 +1,6 @@
 ---
 title: '소개'
-date: '2020-01-28T12:10:32.169Z'
+date: '2020-02-21T12:10:32.169Z'
 template: 'post'
 draft: false
 slug: '/posts/introduce/'
