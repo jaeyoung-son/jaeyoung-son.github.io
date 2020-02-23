@@ -67,3 +67,25 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 ```
+
+## 리액트 네이티브 프로젝트 생성
+
+리액트 네이티브는 버전이 업데이트될 때, 문제를 일으킬 가능성이 있으므로, 리액트 네이티브로 프로젝트를 진행할 때는 버전을 고정하고 사용하는것이 좋다.
+
+```
+npm config set save-exact=true
+```
+
+리액트 네이티브 CLI를 사용하여 프로젝트 생성
+
+```
+react-native init MyApp
+```
+
+프로젝트 생성 후 명령어로 ios 시뮬레이터 실행
+
+```
+cd MyApp
+react-native run-ios
+react-native run-android
+```
