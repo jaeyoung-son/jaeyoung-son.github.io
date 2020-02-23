@@ -1,5 +1,5 @@
 ---
-title: '소개'
+title: '손재영'
 date: '2020-02-21T12:10:32.169Z'
 template: 'post'
 draft: false
@@ -26,7 +26,7 @@ tags:
 
 ### HTML, CSS
 
-- Semantic MarkUp을 준수합니다.
+- Semantic MarkUp을 준수하기위해 노력합니다.
 - Document Object Model(DOM)을 이해하고 있습니다.
 - CSS3, SASS, Styled-Components를 다룹니다.
 - Media query를 사용하여 반응형 웹을 다룹니다.
@@ -52,7 +52,7 @@ tags:
 
 ### wecode(위코드)
 
-##### - 2019.11 ~
+##### - 2019.11 ~ 2020.02
 
 ## 프로젝트
 
