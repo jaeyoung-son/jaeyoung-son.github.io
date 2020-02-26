@@ -7,7 +7,7 @@ slug: '/posts/rn_todolist/'
 category: 'react_native'
 description: '리액트 네이티브 할일목록앱 만들기'
 tags:
-  - 'int'
+  - 'react-native'
 ---
 
 ## AsyncStorage 설치 및 생성
