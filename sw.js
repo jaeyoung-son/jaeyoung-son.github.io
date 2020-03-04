@@ -35,17 +35,17 @@ self.__precacheManifest = [
     "url": "styles-cad9bf75f8994da31389.js"
   },
   {
-    "url": "commons-9959b1b957fcf6dde64f.js"
+    "url": "commons-56ca037899bc561508ea.js"
   },
   {
-    "url": "app-64957bc7e76466c4851b.js"
+    "url": "app-eff881f9d74ef7b4e7e4.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-a7388efdc62430243a75.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "9a1e1978fe4e252f0029b12420604ce5"
+    "revision": "17cefcea0d87a493edf483ec51b11c21"
   },
   {
     "url": "manifest.json",
@@ -77,7 +77,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-64957bc7e76466c4851b.js`))) {
+  if (!resources || !(await caches.match(`/app-eff881f9d74ef7b4e7e4.js`))) {
     return await fetch(event.request)
   }
 
