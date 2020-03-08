@@ -7,7 +7,7 @@ slug: '/posts/front_study1/'
 category: 'study'
 description: '스터디 내용 정리하기 HTML React'
 tags:
-  - 'react-native'
+  - 'study'
 ---
 
 위코드 수강을 마치고 동기분들과 함께 면접준비도 할겸 부족한 개념도 채울겸 스터디를 진행하기로 하였다. 스터디를 준비하며 정리한 내용을 기록 해보자
