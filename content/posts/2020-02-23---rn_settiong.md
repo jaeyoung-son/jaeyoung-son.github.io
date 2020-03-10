@@ -7,7 +7,7 @@ slug: '/posts/rn_setting/'
 category: 'react_native'
 description: '리액트 네이티브 초기 설정하기'
 tags:
-  - 'int'
+  - 'react-native'
 ---
 
 ## 왓치맨
