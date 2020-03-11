@@ -1,6 +1,6 @@
 ---
 title: '자바스크립트 this란??'
-date: '2020-03-12T12:10:32.169Z'
+date: '2020-03-11T12:10:32.169Z'
 template: 'post'
 draft: false
 slug: '/posts/front_this/'
@@ -156,6 +156,6 @@ console.log(bar() === globalObject); // false
 단순히 그냥 일반함수와 화살표함수의 차이만 있는줄 알았던 this였지만 많은경우에 각각 다른 값을 가리키는 this를 확인할 수 있었다.
 사용해야할 상황이 있을때 많이 참고하며 사용해야겠다고 느꼈다.
 
-정리를 하다보니 잘못된 정보가 있을수 있으니 있다면 말씀해주세요!
-참조: https://blueshw.github.io/2018/03/12/this/
+정리를 하다보니 잘못된 정보가 있을수 있으니 있다면 말씀해주세요!  
+참조: https://blueshw.github.io/2018/03/12/this/  
 mdn

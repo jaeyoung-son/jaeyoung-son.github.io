@@ -44,14 +44,14 @@ block 밖인 전역scope 에서 생성한 변수를 전역변수(global variable
 
 ```js
 const name = '재영맨';
-console.log(name);
+console.log(name); //재영맨
 
 function returnName() {
-  console.log(name);
+  console.log(name); //재영맨
   return name;
 }
 
-console.log(returnName());
+console.log(returnName()); //재영맨
 ```
 
 코드 어디에서든 접근이 가능하며 변수값을 확인할 수 있다.
@@ -157,10 +157,10 @@ Person.prototype.getAge = function() {
 
 var jy = new Person('재영', 26);
 var koko = new Person('코코', 5);
-console.log(jy.getName());
-console.log(jy.getAge());
-console.log(koko.getName());
-console.log(koko.getAge());
+console.log(jy.getName()); // 재영
+console.log(jy.getAge()); // 26
+console.log(koko.getName()); // 코코
+console.log(koko.getAge()); // 5
 ```
 
 위 코드의 5번째 줄에 Person.prototype이 표준 정의중 constructor.prototype로 접근할 수 있다고 한 부분이다.
@@ -257,8 +257,8 @@ console.log(jy.constructor); // class Jy extends Person
 ```
 
 이렇게 클래스 개념이 생기면서 자바스크립트에서도 다른 객체지향 언어들과 유사하게
-상속을 구현할 수 있게 되었다.  
-  
+상속을 구현할 수 있게 되었다.
+
 이와같이 scope와 const,let,var 그리고 프로토타입에 대해 공부를 해보았다.  
 스코프와 변수선언 쪽은 보면서 이해가 되었지만. 프로토타입은 생소하고 많이 어려웠다. 또한 파면 팔수록
 더욱 깊어지기에 온전히 이해하려면 시간이 많이 필요할거같은 느낌이 든다. 적어도 프로토타입이 무엇이고
