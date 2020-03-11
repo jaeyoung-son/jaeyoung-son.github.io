@@ -30,10 +30,13 @@ tags:
 - Document Object Model(DOM)을 이해하고 있습니다.
 - CSS, SASS, Styled-Components를 다룹니다.
 - Media query를 사용하여 반응형 웹을 다룹니다.
+- flex layout에 익숙합니다.
 
 ### Javascript
 
 - ES5와 ES6 이후의 문법에 익숙합니다.
+- 자바스크립트 closure를 이해하고 있습니다.
+- promise, async await 비동기 처리를 이해하고 있습니다.
 
 ### React
 
@@ -47,6 +50,7 @@ tags:
 
 - Version Control(Git)을 이용한 협업에 익숙합니다.
 - react-native에 관심이 있어 학습중입니다.
+- Typescript의 필요성을 느끼고 학습중입니다.
 
 ## 개발 경력
 
