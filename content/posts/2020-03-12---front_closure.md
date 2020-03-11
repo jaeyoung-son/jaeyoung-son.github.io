@@ -1,5 +1,5 @@
 ---
-title: '프론트 스터디 클로저'
+title: '자바스크립트 클로저'
 date: '2020-03-12T12:10:32.169Z'
 template: 'post'
 draft: false
