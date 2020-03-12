@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Jaeyoung]]></title><description><![CDATA[hello world]]></description><link>https://jaeyoung-son.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Mar 2020 02:51:55 GMT</lastBuildDate><item><title><![CDATA[자바스크립트 클로저]]></title><description><![CDATA[스터디. 클로저에 대해]]></description><link>https://jaeyoung-son.github.io//posts/front_closure/</link><guid isPermaLink="false">https://jaeyoung-son.github.io//posts/front_closure/</guid><pubDate>Thu, 12 Mar 2020 12:10:32 GMT</pubDate><content:encoded>&lt;p&gt;클로저 파헤치기&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Jaeyoung]]></title><description><![CDATA[hello world]]></description><link>https://jaeyoung-son.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Mar 2020 02:58:17 GMT</lastBuildDate><item><title><![CDATA[자바스크립트 클로저]]></title><description><![CDATA[스터디. 클로저에 대해]]></description><link>https://jaeyoung-son.github.io//posts/front_closure/</link><guid isPermaLink="false">https://jaeyoung-son.github.io//posts/front_closure/</guid><pubDate>Thu, 12 Mar 2020 12:10:32 GMT</pubDate><content:encoded>&lt;p&gt;클로저 파헤치기&lt;/p&gt;
 &lt;h2 id=&quot;closure&quot;&gt;&lt;a href=&quot;#closure&quot; aria-label=&quot;closure permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;closure&lt;/h2&gt;
 &lt;p&gt;일단 closure 사전적 의미로는 폐쇠란다. 무엇을 폐쇠한다는건지는 잘 모르겠지만 한번 보다 보면 이래서 이름이 클로저구나 느낌이 온다.&lt;br&gt;
 클로저는 자바스크립트에서 함수가 가지는 여러 특징들로 인해 생겨나는 특별한 함수이다. 아주 혼란스럽지만 동시에 아주 유용한 개념.
@@ -2737,6 +2737,188 @@ Styled-component로 이미지 캐러셀 기능 구현&lt;br&gt;
 백엔드와 API호출하며 더보기 기능 구현&lt;/p&gt;
 &lt;h3 id=&quot;후기-1&quot;&gt;&lt;a href=&quot;#%ED%9B%84%EA%B8%B0-1&quot; aria-label=&quot;후기 1 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;후기&lt;/h3&gt;
 &lt;p&gt;이번에 프로젝트를 하면서 처음으로 Redux와 Styled-component, Hooks를 적용했습니다. 액션이며 리듀서며 디스패치며 개념이 이해하기 어렵고 힘들었지만 간단한 기능은 적용 시킬 수 있었다. 스타일드컴포넌트도 활용도가 무궁무진 하고 아주 효율적으로 쓸 수 있을것같다고 느꼈습니다. 훅스 개념도 많이 사용하면서 함수형 컴포넌트 에대한 개념도 잡았습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 28px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 385.7142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABNABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGgAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAEFAnf/xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAEDAQE/AS//xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAECAQE/AS//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAY/Anf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/IXf/2gAMAwEAAgADAAAAEAAAAAAAAAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAwEBPxAv/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAgEBPxAv/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPxB3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ff&quot;
+        title=&quot;ff&quot;
+        src=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+        srcset=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg 28w&quot;
+        sizes=&quot;(max-width: 28px) 100vw, 28px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 28px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 385.7142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABNABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGgAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAEFAnf/xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAEDAQE/AS//xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAECAQE/AS//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAY/Anf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/IXf/2gAMAwEAAgADAAAAEAAAAAAAAAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAwEBPxAv/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAgEBPxAv/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPxB3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ff&quot;
+        title=&quot;ff&quot;
+        src=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+        srcset=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg 28w&quot;
+        sizes=&quot;(max-width: 28px) 100vw, 28px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 28px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 385.7142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABNABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGgAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAEFAnf/xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAEDAQE/AS//xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAECAQE/AS//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAY/Anf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/IXf/2gAMAwEAAgADAAAAEAAAAAAAAAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAwEBPxAv/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAgEBPxAv/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPxB3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ff&quot;
+        title=&quot;ff&quot;
+        src=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+        srcset=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg 28w&quot;
+        sizes=&quot;(max-width: 28px) 100vw, 28px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 28px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 385.7142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABNABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGgAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAEFAnf/xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAEDAQE/AS//xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAECAQE/AS//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAY/Anf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/IXf/2gAMAwEAAgADAAAAEAAAAAAAAAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAwEBPxAv/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAgEBPxAv/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPxB3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ff&quot;
+        title=&quot;ff&quot;
+        src=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+        srcset=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg 28w&quot;
+        sizes=&quot;(max-width: 28px) 100vw, 28px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 28px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 385.7142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABNABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGgAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAEFAnf/xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAEDAQE/AS//xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAECAQE/AS//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAY/Anf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/IXf/2gAMAwEAAgADAAAAEAAAAAAAAAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAwEBPxAv/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAgEBPxAv/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPxB3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ff&quot;
+        title=&quot;ff&quot;
+        src=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+        srcset=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg 28w&quot;
+        sizes=&quot;(max-width: 28px) 100vw, 28px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 28px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 385.7142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABNABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGgAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAEFAnf/xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAEDAQE/AS//xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAECAQE/AS//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAY/Anf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/IXf/2gAMAwEAAgADAAAAEAAAAAAAAAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAwEBPxAv/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAgEBPxAv/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPxB3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ff&quot;
+        title=&quot;ff&quot;
+        src=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+        srcset=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg 28w&quot;
+        sizes=&quot;(max-width: 28px) 100vw, 28px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 28px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 385.7142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABNABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGgAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAEFAnf/xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAEDAQE/AS//xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAECAQE/AS//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAY/Anf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/IXf/2gAMAwEAAgADAAAAEAAAAAAAAAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAwEBPxAv/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAgEBPxAv/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPxB3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ff&quot;
+        title=&quot;ff&quot;
+        src=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+        srcset=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg 28w&quot;
+        sizes=&quot;(max-width: 28px) 100vw, 28px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;h2 id=&quot;1차-프로젝트--spacecloud-클론&quot;&gt;&lt;a href=&quot;#1%EC%B0%A8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8--spacecloud-%ED%81%B4%EB%A1%A0&quot; aria-label=&quot;1차 프로젝트  spacecloud 클론 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1차 프로젝트 : SpaceCloud 클론&lt;/h2&gt;
@@ -2752,6 +2934,188 @@ React calendar 라이브러리를 활용한 예약기능 구현&lt;br&gt;
 React Router 사용&lt;/p&gt;
 &lt;h3 id=&quot;후기-2&quot;&gt;&lt;a href=&quot;#%ED%9B%84%EA%B8%B0-2&quot; aria-label=&quot;후기 2 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;후기&lt;/h3&gt;
 &lt;p&gt;리액트를 사용한 첫 프로젝트 였기에, 기본기가 많이 부족한 상태에서 시작한 프로젝트 입니다. 진행하면서 props와 state개념을 잡을 수 있었고, 로그인 회원가입 페이지를진행하면서 JWT토큰을 이용한 로그인 인증을 배웠고 문제가 생길때 해결해나가는 요령을 터득한 프로젝트 였습니다. 백앤드와 API를 주고받으며 LifeCycle method 개념도 잡고 협업하는 재미도 느꼈습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 28px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 385.7142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABNABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGgAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAEFAnf/xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAEDAQE/AS//xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAECAQE/AS//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAY/Anf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/IXf/2gAMAwEAAgADAAAAEAAAAAAAAAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAwEBPxAv/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAgEBPxAv/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPxB3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ff&quot;
+        title=&quot;ff&quot;
+        src=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+        srcset=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg 28w&quot;
+        sizes=&quot;(max-width: 28px) 100vw, 28px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 28px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 385.7142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABNABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGgAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAEFAnf/xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAEDAQE/AS//xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAECAQE/AS//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAY/Anf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/IXf/2gAMAwEAAgADAAAAEAAAAAAAAAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAwEBPxAv/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAgEBPxAv/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPxB3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ff&quot;
+        title=&quot;ff&quot;
+        src=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+        srcset=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg 28w&quot;
+        sizes=&quot;(max-width: 28px) 100vw, 28px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 28px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 385.7142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABNABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGgAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAEFAnf/xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAEDAQE/AS//xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAECAQE/AS//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAY/Anf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/IXf/2gAMAwEAAgADAAAAEAAAAAAAAAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAwEBPxAv/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAgEBPxAv/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPxB3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ff&quot;
+        title=&quot;ff&quot;
+        src=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+        srcset=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg 28w&quot;
+        sizes=&quot;(max-width: 28px) 100vw, 28px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 28px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 385.7142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABNABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGgAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAEFAnf/xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAEDAQE/AS//xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAECAQE/AS//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAY/Anf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/IXf/2gAMAwEAAgADAAAAEAAAAAAAAAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAwEBPxAv/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAgEBPxAv/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPxB3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ff&quot;
+        title=&quot;ff&quot;
+        src=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+        srcset=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg 28w&quot;
+        sizes=&quot;(max-width: 28px) 100vw, 28px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 28px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 385.7142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABNABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGgAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAEFAnf/xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAEDAQE/AS//xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAECAQE/AS//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAY/Anf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/IXf/2gAMAwEAAgADAAAAEAAAAAAAAAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAwEBPxAv/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAgEBPxAv/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPxB3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ff&quot;
+        title=&quot;ff&quot;
+        src=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+        srcset=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg 28w&quot;
+        sizes=&quot;(max-width: 28px) 100vw, 28px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 28px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 385.7142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABNABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGgAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAEFAnf/xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAEDAQE/AS//xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAECAQE/AS//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAY/Anf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/IXf/2gAMAwEAAgADAAAAEAAAAAAAAAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAwEBPxAv/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAgEBPxAv/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPxB3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ff&quot;
+        title=&quot;ff&quot;
+        src=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+        srcset=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg 28w&quot;
+        sizes=&quot;(max-width: 28px) 100vw, 28px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 28px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 385.7142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABNABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGgAAAAAAAAAB//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAEFAnf/xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAEDAQE/AS//xAAUEQEAAAAAAAAAAAAAAAAAAAAw/9oACAECAQE/AS//xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAY/Anf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/IXf/2gAMAwEAAgADAAAAEAAAAAAAAAAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAwEBPxAv/8QAFBEBAAAAAAAAAAAAAAAAAAAAMP/aAAgBAgEBPxAv/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPxB3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ff&quot;
+        title=&quot;ff&quot;
+        src=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg&quot;
+        srcset=&quot;/static/47c7403c10d9e3392fd133a72a6647cc/bdd34/ff.jpg 28w&quot;
+        sizes=&quot;(max-width: 28px) 100vw, 28px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Brandi 인턴쉽(3차 프로젝트)]]></title><description><![CDATA[브랜디 인턴쉽 기업협업]]></description><link>https://jaeyoung-son.github.io//posts/project/brandi</link><guid isPermaLink="false">https://jaeyoung-son.github.io//posts/project/brandi</guid><pubDate>Fri, 21 Feb 2020 10:43:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;brandi-인턴쉽-관리자-클론-project&quot;&gt;&lt;a href=&quot;#brandi-%EC%9D%B8%ED%84%B4%EC%89%BD-%EA%B4%80%EB%A6%AC%EC%9E%90-%ED%81%B4%EB%A1%A0-project&quot; aria-label=&quot;brandi 인턴쉽 관리자 클론 project permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Brandi 인턴쉽 관리자 클론 Project&lt;/h1&gt;
 &lt;h2 id=&quot;1-프로젝트-소개&quot;&gt;&lt;a href=&quot;#1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%86%8C%EA%B0%9C&quot; aria-label=&quot;1 프로젝트 소개 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 프로젝트 소개&lt;/h2&gt;
