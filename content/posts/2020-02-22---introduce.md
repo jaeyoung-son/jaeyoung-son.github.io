@@ -28,7 +28,7 @@ tags:
 
 - Semantic MarkUp을 준수하기위해 노력합니다.
 - Document Object Model(DOM)을 이해하고 있습니다.
-- CSS, SASS, Styled-Components를 다룹니다.
+- CSS, SCSS, Styled-Components를 다룹니다.
 - Media query를 사용하여 반응형 웹을 다룹니다.
 - flex layout에 익숙합니다.
 
