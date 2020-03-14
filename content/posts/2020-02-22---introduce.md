@@ -101,13 +101,14 @@ tags:
 
   이번에 프로젝트를 하면서 처음으로 Redux와 Styled-component, Hooks를 적용했습니다. 액션이며 리듀서며 디스패치며 개념이 이해하기 어렵고 힘들었지만 간단한 기능은 적용 시킬 수 있었다. 스타일드컴포넌트도 활용도가 무궁무진 하고 아주 효율적으로 쓸 수 있을것같다고 느꼈습니다. 훅스 개념도 많이 사용하면서 함수형 컴포넌트 에대한 개념도 잡았습니다.
 
-  <!-- ![](../images/ff.JPG)
   ![](../images/ff.JPG)
   ![](../images/ff.JPG)
   ![](../images/ff.JPG)
   ![](../images/ff.JPG)
   ![](../images/ff.JPG)
-  ![](../images/ff.JPG) -->
+  ![](../images/ff.JPG)
+  ![](../images/ff.JPG)
+  ![](../images/ff.JPG)
 
 * ## 1차 프로젝트 : SpaceCloud 클론
 
@@ -128,10 +129,10 @@ tags:
 
   리액트를 사용한 첫 프로젝트 였기에, 기본기가 많이 부족한 상태에서 시작한 프로젝트 입니다. 진행하면서 props와 state개념을 잡을 수 있었고, 로그인 회원가입 페이지를진행하면서 JWT토큰을 이용한 로그인 인증을 배웠고 문제가 생길때 해결해나가는 요령을 터득한 프로젝트 였습니다. 백앤드와 API를 주고받으며 LifeCycle method 개념도 잡고 협업하는 재미도 느꼈습니다.
 
-  <!-- ![](../images/ff.JPG)
   ![](../images/ff.JPG)
   ![](../images/ff.JPG)
   ![](../images/ff.JPG)
   ![](../images/ff.JPG)
   ![](../images/ff.JPG)
-  ![](../images/ff.JPG) -->
+  ![](../images/ff.JPG)
+  ![](../images/ff.JPG)
