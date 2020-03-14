@@ -68,7 +68,7 @@ tags:
 
   ### 역할
 
-  ![](../images/brandiRealFix.png)
+  ![](../images/brandiNewFix.png)
 
 로그인 및 회원가입페이지, 셀러정보, 샐러목록 페이지  
  CKEditor 를 사용하여 상품등록 에디터 구현  
