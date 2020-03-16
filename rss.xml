@@ -1,4 +1,101 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Jaeyoung]]></title><description><![CDATA[hello world]]></description><link>https://jaeyoung-son.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 16 Mar 2020 09:47:59 GMT</lastBuildDate><item><title><![CDATA[타입스크립트 리액트]]></title><description><![CDATA[타입스크립트 더하기 리액트]]></description><link>https://jaeyoung-son.github.io//posts/react_typescript/</link><guid isPermaLink="false">https://jaeyoung-son.github.io//posts/react_typescript/</guid><pubDate>Mon, 16 Mar 2020 12:10:32 GMT</pubDate><content:encoded>&lt;p&gt;익숙해질것 같으면서도 그렇지 않은 타입스크립트 부수기&lt;br&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Jaeyoung]]></title><description><![CDATA[hello world]]></description><link>https://jaeyoung-son.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 16 Mar 2020 16:51:11 GMT</lastBuildDate><item><title><![CDATA[http, restful, jwt]]></title><description><![CDATA[http restful jwt]]></description><link>https://jaeyoung-son.github.io//posts/web/</link><guid isPermaLink="false">https://jaeyoung-son.github.io//posts/web/</guid><pubDate>Tue, 17 Mar 2020 12:10:32 GMT</pubDate><content:encoded>&lt;p&gt;HTTP 와 RESTful JWT 에 관해 학습 및 정리&lt;/p&gt;
+&lt;h2 id=&quot;http&quot;&gt;&lt;a href=&quot;#http&quot; aria-label=&quot;http permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP&lt;/h2&gt;
+&lt;p&gt;Hyper Text Transfer Protocol&lt;br&gt;
+하이퍼텍스트(HTML) 문서를 교환하기 위해 만들어진 통신규약이다. 즉 웹상에서 네트워크로 서버끼리 통신을 할때 어떠한 형식으로 통신을 하자고 규정해놓은 통신 형식 또는 통신 구조이다.&lt;/p&gt;
+&lt;h3 id=&quot;핵심요소&quot;&gt;&lt;a href=&quot;#%ED%95%B5%EC%8B%AC%EC%9A%94%EC%86%8C&quot; aria-label=&quot;핵심요소 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;핵심요소&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;통신방식
+HTTP의 통신방식은 기본적으로 요청/응답 구조로 되어있다.&lt;br&gt;
+클라이언트가 HTTP request를 서버에 보내면 서버는 HTTP response를 보내는 구조.&lt;br&gt;
+HTTP는 stateless 이다.&lt;br&gt;
+stateless란 말 그대로 상태를 저장하지 않는다. 요청이 오면 그에 응답을 할 뿐, 여러 요청/응답끼리 연결되어 있지 않다. 독립적이다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Request 구조&lt;/p&gt;
+&lt;h4 id=&quot;start-line&quot;&gt;&lt;a href=&quot;#start-line&quot; aria-label=&quot;start line permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;start line&lt;/h4&gt;
+&lt;p&gt;말 그대로 HTTP request의 첫 라인 start line 또한 3부분으로 구성되어 있다.&lt;br&gt;
+HTTP Method&lt;br&gt;
+request가 의도한 action을 정의하는 부분.&lt;br&gt;
+get,post,put,delete,options 등이 있으며 주로 get 과 Post가 쓰인다. request target&lt;br&gt;
+요청이 전송되는 목표 uri 예를들어 /login&lt;br&gt;
+HTTP Version&lt;br&gt;
+말 그대로 버전 1.0, 1.1, 2.0&lt;/p&gt;
+&lt;h4 id=&quot;headers&quot;&gt;&lt;a href=&quot;#headers&quot; aria-label=&quot;headers permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;headers&lt;/h4&gt;
+&lt;p&gt;해당 요청에 대한 추가 정보를 담고 있는 부분.
+key : value 값으로 되어있다.&lt;br&gt;
+자주 사용되는 headers 정보&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Host
+요청이 전송되는 target의 host uri: 예를들어 google.com&lt;/li&gt;
+&lt;li&gt;User-Agent
+요청을 보내는 클라이언트에 대한 정보 예를들어 웹브라우저에 대한 정보&lt;/li&gt;
+&lt;li&gt;Accept
+해당 요청이 받을 수 있는 응답 타입&lt;/li&gt;
+&lt;li&gt;Connection
+해당 요청이 끝난 후 클라이언트와 서버가 계속 네트워크 커넥션을 유지할지 끊을지 지시&lt;/li&gt;
+&lt;li&gt;Content-Type
+해당 요청이 보내는 메시지 body의 타입 예 application/json&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Content-Length
+메시지 body의 길이&lt;/p&gt;
+&lt;h3 id=&quot;body&quot;&gt;&lt;a href=&quot;#body&quot; aria-label=&quot;body permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Body&lt;/h3&gt;
+&lt;p&gt;해당 request의 실제 메시지/내용 이며 body가 없는 request도 많다. get 요청들은 대부분 바디가 없다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Response 구조&lt;/p&gt;
+&lt;h4 id=&quot;status-linre&quot;&gt;&lt;a href=&quot;#status-linre&quot; aria-label=&quot;status linre permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;status linre&lt;/h4&gt;
+&lt;p&gt;response의 상태를 간략하게 나타내주는 부분&lt;/p&gt;
+&lt;h4 id=&quot;headers-1&quot;&gt;&lt;a href=&quot;#headers-1&quot; aria-label=&quot;headers 1 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;headers&lt;/h4&gt;
+&lt;p&gt;request의 headers와 거의 동일하며 response에서만 사용되는 header값들이 있다. 예 user-agent 대신 server&lt;/p&gt;
+&lt;h4 id=&quot;body-1&quot;&gt;&lt;a href=&quot;#body-1&quot; aria-label=&quot;body 1 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;body&lt;/h4&gt;
+&lt;p&gt;request의 body와 동일하다. 모든 응답에 body가 있지 않다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;restful&quot;&gt;&lt;a href=&quot;#restful&quot; aria-label=&quot;restful permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RESTful&lt;/h2&gt;
+&lt;p&gt;resful을 알기전 알아두면 좋은 배경지식!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;URI
+Uniform Resourece Identifier 의 약자이다.&lt;br&gt;
+해당 사이트의 특정 자원의 위치를 나타내는 유일한 주소&lt;br&gt;
+/login, /news&lt;/li&gt;
+&lt;li&gt;payload
+http request에서 보내는 데이터.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;representational-state-transfer&quot;&gt;&lt;a href=&quot;#representational-state-transfer&quot; aria-label=&quot;representational state transfer permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;REpresentational State Transfer&lt;/h3&gt;
+&lt;p&gt;웹상에서 사용되는 여러 리소스를 http uri로 표현하고 그 리소스에 대한 행위를 http method로 정의하는 방식이다.&lt;br&gt;
+즉 리소스(http uri로 정의된)를 어떻게 한다 (http method + payload)를 구조적으로 깔끔하게 표현하는것.&lt;/p&gt;
+&lt;h3 id=&quot;restful-api의-장점&quot;&gt;&lt;a href=&quot;#restful-api%EC%9D%98-%EC%9E%A5%EC%A0%90&quot; aria-label=&quot;restful api의 장점 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RESTful API의 장점&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;가장 명확한 장점은 바로 self-descriptiveness 셀프 서술&lt;/li&gt;
+&lt;li&gt;restful api는 그 자체만으로 api의 목적이 쉽게 이해가 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;restful-개발시-유의점&quot;&gt;&lt;a href=&quot;#restful-%EA%B0%9C%EB%B0%9C%EC%8B%9C-%EC%9C%A0%EC%9D%98%EC%A0%90&quot; aria-label=&quot;restful 개발시 유의점 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;restful 개발시 유의점&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;/슬래시 는 계층관계를 나타낼때 사용된다.&lt;/li&gt;
+&lt;li&gt;URI에 _언더바는 주로 쓰지 않고 대문자보다 소문자를 쓴다 긴단어도 사용안한다. 가독성을위해&lt;/li&gt;
+&lt;li&gt;URI는 명사를 사용 HTTP method에서 동사의미를 표현&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;jwt&quot;&gt;&lt;a href=&quot;#jwt&quot; aria-label=&quot;jwt permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;JWT&lt;/h2&gt;
+&lt;p&gt;JWT 란 JSON Web Token 의 약자이며 웹표준 으로서 두 개체에서 JSON객체를 사용하여 가볍고 자가수용적인 방식으로 정보를 안정성 있게 전달해준다.&lt;br&gt;
+대부분의 주로 사용되는 프로그래밍 언어에서 지원이 되며 JWT는 HTTP 헤더에 넣어서 전달 할 수 있고, URL의 파라미터로 손쉽게 전달될 수 있다.&lt;/p&gt;
+&lt;h3 id=&quot;어느-상황에서-jwt를-사용할까&quot;&gt;&lt;a href=&quot;#%EC%96%B4%EB%8A%90-%EC%83%81%ED%99%A9%EC%97%90%EC%84%9C-jwt%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%A0%EA%B9%8C&quot; aria-label=&quot;어느 상황에서 jwt를 사용할까 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;어느 상황에서 JWT를 사용할까&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;회원 인증: 주로 JWT는 로그인을 하면 서버는 유저에게 토큰을 발급하고 그 후 유저가 서버에 요청을 할 때 마다 JWT를 포함하여 전달한다. 서버가 클라이언트에게 요청을 받을때 마다, 토큰이 유효하고 인증됐는지 검증하고 권한이 있는지 확인한다.&lt;/li&gt;
+&lt;li&gt;정보 교류: JWT는 두 개체 사이에서 안정성있게 정보를 교환하기에 좋은 방법이다. 그 이유는 정보가 sign이 되어있기 때문.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;jwt의-구조&quot;&gt;&lt;a href=&quot;#jwt%EC%9D%98-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;jwt의 구조 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;JWT의 구조&lt;/h3&gt;
+&lt;p&gt;JWT는 .을 구분으로 3가지의 문자열로 되어있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;header
+헤더는 두가지의 정보를 지니고 있다.&lt;br&gt;
+type: 토큰의 타입을 지정한다. JWT&lt;br&gt;
+alg: 해싱 알고리즘을 지정한다. 보통 HMAC SHA256 또는 RSA 알고리즘은 토큰을 검증할 때 사용되는 signature 부분에서 사용된다.&lt;/li&gt;
+&lt;li&gt;payload
+payload부분에는 토큰에 담을 정보가 들어있다. 여기에 담는 정보의 한 조각을 클레임이라고 부르고 이는 nane/value의 한 쌍으로 이루어져있다.&lt;/li&gt;
+&lt;li&gt;signature 서명
+서명은 헤더의 인코딩값과 정보의 인코딩값을 합친 후 비밀키로 해쉬를 하여 생성힌다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[타입스크립트 리액트]]></title><description><![CDATA[타입스크립트 더하기 리액트]]></description><link>https://jaeyoung-son.github.io//posts/react_typescript/</link><guid isPermaLink="false">https://jaeyoung-son.github.io//posts/react_typescript/</guid><pubDate>Mon, 16 Mar 2020 12:10:32 GMT</pubDate><content:encoded>&lt;p&gt;익숙해질것 같으면서도 그렇지 않은 타입스크립트 부수기&lt;br&gt;
 타입스크립트 + 리액트 적용 정리&lt;br&gt;
 프로젝트 생성&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npx create-react-app app-name --typescript&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
