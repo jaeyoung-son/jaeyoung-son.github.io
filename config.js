@@ -27,7 +27,7 @@ module.exports = {
   ],
   author: {
     name: 'Jaeyoung',
-    photo: '/jycat.png',
+    photo: '/jyProfile.png',
     bio: '',
     contacts: {
       email: 'zkqkzl2@gmail.com',
