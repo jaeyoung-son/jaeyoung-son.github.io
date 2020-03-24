@@ -49,7 +49,8 @@ one
 
 ## 이벤트 캡쳐 Event Capture
 
-이벤트 캡쳐는 이벤트 버블링과 반대 방향으로 진행되는 전파 방식이다.
+이벤트 캡쳐는 이벤트 버블링과 반대 방향으로 진행되는 전파 방식이다.  
+최상위 요소인 body 태그에서 해당 태그를 찾아 내려간다.
 
 ```html
 <body>
@@ -60,3 +61,65 @@ one
   </div>
 </body>
 ```
+
+```js
+const divs = document.querySelectorAll('div');
+divs.forEach(function(div) {
+  div.addEventListener('click', logEvent, {
+    capture: true //기본값이 false
+  });
+});
+
+function logEvent(e) {
+  console.log(e.currentTarget.className);
+}
+```
+
+three 클래스를 가진 디브를 클릭하면
+
+```
+one
+two
+three
+```
+
+라는 결과가 나온다.
+
+### 전파방지 event.stopPropagation()
+
+```js
+function logEvent(event) {
+  event.stopPropagation();
+}
+```
+
+stopPropagation은 해당 이벤트가 전파가 되는것을 막는다. 이벤트 버블링의 경우에는 클릭한 요소의 이벤트만 발생시키고 상위 요소로 전파되는것을 막고 캡쳐의 경우에는 클릭한 요소의 최상위 요소의 이벤트만 동작시키고 하위 요소들로 전파하지 않는다. (앞선 예제에서 버블링에선 three가 찍히고 캡쳐링에성 one이 찍힘)
+
+## 이벤트 위임 Event Delegation
+
+위임을 한 문장으로 요약한다면 하위 요소에 각각 이벤트를 붙이지 않고 상위 요소에서 하위 요소의 이벤트들을 제어하는 방식이다.
+
+```html
+<h1>할일 목록</h1>
+<ul class="itemList">
+  <li>
+    <label for="item1">이벤트 버블링 배우기</label>
+  </li>
+  <li>
+    <label for="item2">이벤트 캡쳐링 배우기</label>
+  </li>
+</ul>
+```
+
+리스트 아이템이 많아지면 많아질수록 이벤트 리스너를 다는 작업이 번거로워 진다.
+
+```js
+const itemList = document.querySelector('.itemList');
+itemList.addEventListener('click', function(event) {
+  alert('click');
+});
+```
+
+라벨에 이벤트를 추가하는 대신 상위 요소인 ul태그에 이벤트 리스너를 달고 하위에서 발생한 클릭 이벤트를 감지한다.  
+브라우저가 어떻게 이벤트를 감지하고 어떤식으로 동작하는지 배울 수 있었던 정리였다.  
+캡틴판교님의 이벤트 정리글을 보며 정리하였습니다.
