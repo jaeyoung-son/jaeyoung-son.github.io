@@ -122,3 +122,69 @@ function App() {
 ```
 
 단순히 SplitMe 컴포넌트의 가시성을 의미하는 visible이라는 상태만 업데이트하여 스플리팅된 컴포넌트를 보여준다.
+
+### Loadable Components
+
+Loadable Components는 코드 스플리잍을 편하게 하도록 도와주는 서드파티 라이브러리이다. 이 라이브러리의 이점은 서버사이드렌더링을 지원한다. 또한, 렌더링하기전에 필요할 때 스플리팅된 파일을 미리 불러올 수 있는 기능도 있다.
+
+```
+npm install @loadable/component
+```
+
+사용법은 React.lazy와 비슷하며 Suspense를 사용할 필요는 없다.
+
+```jsx
+import loadable from '@loadable/component';
+const SplitMe = loadable(() => import('./SplitMe'), {
+  fallback: <div>loading!</div>
+});
+
+function App() {
+  const [visible, setVisible] = useState(false);
+  const onClick = () => {
+    setVisible(true);
+  };
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p onClick={onClick}>Hello React!</p>
+        {visible && <SplitMe />}
+      </header>
+    </div>
+  );
+}
+```
+
+loadable함수의 두 번째 인자를 활용하여 로딩시 보여줄 UI를 설정
+
+```jsx
+const SplitMe = loadable(() => import('./SplitMe'), {
+  fallback: <div>loading!</div>
+});
+
+function App() {
+  const [visible, setVisible] = useState(false);
+  const onClick = () => {
+    setVisible(true);
+  };
+  const onMouseOver = () => {
+    SplitMe.preload();
+  };
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p onClick={onClick} onMouseOver={onMouseOver}>
+          Hello React!
+        </p>
+        {visible && <SplitMe />}
+      </header>
+    </div>
+  );
+}
+```
+
+SplitMe의 preload를 사용하면 커서를 올리기만해도 로딩이 시작된다. 그리고 클릭시 렌더링 더 좋은 사용자경험을 제공할 수 있는 기능
