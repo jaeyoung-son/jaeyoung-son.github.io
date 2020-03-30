@@ -3,7 +3,7 @@ title: '코드 스플리팅'
 date: '2020-03-30T12:10:32.169Z'
 template: 'post'
 draft: false
-slug: '/posts/array_method2/'
+slug: '/posts/code_spliting/'
 category: 'javascript'
 description: '리액트 에서 컴포넌트를 원할때 불러오자'
 tags:
