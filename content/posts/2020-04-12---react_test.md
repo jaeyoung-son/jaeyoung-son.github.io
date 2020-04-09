@@ -106,3 +106,107 @@ After setting valid, you can see "devDependencies" package.json
 "@testing-library/jest-dom": "^4.1.0",
 "@testing-library/react": "^9.2.0",
 ```
+
+npm test로 테스트가 통과하는지 확인한다.
+컴포넌트를 렌더링 할때는 render()라는 함수를 사용한다 이 함수가 호출되면 그 결과물에 DOM을 선택할 수 있는 다양한 쿼리들과 container가 포함된다. 여기서 container는 해당 컴포넌트의 최상위 DOM을 가르킨다. 이를 가지고 스냅샷 테스팅을 할 수도있다. getByText는 쿼리함수라고 부르며 이 함수를 사용하면 텍스트를 사용해서 원하는 DOM을 선택할 수 있다.
+
+### 스냅샷 테스팅
+
+스냅샷 테스팅은 렌더링된 결과가 이전에 렌더링한 결과와 일치하는지 확인하는 작업을 의미한다. 코드를 저장하면 src/**snapshot**/Profile.test.js/snap 이라는 파일이 만들어진다. 컴포넌트가 렌더링됐을 때 이 스냅샷과 일치하지 않으면 테스트가 실패한다. 만약에 스냅샷을 업데이트 하고싶다면 테스트가 실행되고 있는 콘솔창에서 u키를 누르면 된다.
+
+### 다양한 쿼리
+
+render함수를 실행하고 나면 결과물 안에는 다양한 쿼리 함수들이 있다. 이 쿼리 함수들은 react-testing-library 기반인 dom-testing-library에서 지원하는 함수들이다. 이 쿼리함수들은 Variant와 Queries의 조합으로 네이밍이 이루어져있다.
+
+#### Variant
+
+##### getBy
+
+getBy\*로 시작하는 쿼리는 조건에 일치하는 DOM 엘리먼트 하나를 선택한다. 만약 없다면 에러가 발생한다.
+
+##### getAllBy
+
+getAllBy\*로 시작하는 쿼리는 조건에 일치하는 DOM 엘리먼트 여러개를 선택한다. 이 역시 하나도 없다면 에러가 발생한다.
+
+##### queryBy
+
+queryBy\*로 시작하는 쿼리는 조건에 일치하는 DOM 엘리먼트 하나를 선택한다. 존재하지 않아도 에러가 발생하지않음
+
+##### queryAllBy
+
+queryAllby\*로 시작하는 쿼리는 조건에 일치하는 DOM 엘리먼트 여러개를 선택하는데 존재하지 않아도 에러가 발생하지 않는다.
+
+##### findBy
+
+findBy\*로 시작하는 쿼리는 조건에 일치하는 DOM 엘리먼트가 하나가 나타날 때 까지 기다렸다가 해당 DOM을 선택하는 Promise를 반환한다. 기본 timeout인 4500ms이후에도 나타나지 않으면 에러가 발생한다.
+
+##### findAllBy
+
+findAllBy\*로 시작하는 쿼리는 조건에 일치하는 DOM 엘리먼트 여러개가 나타날때 까지 기다렸다가 해당 DOM을 선택하는 Promise를 반환한다. 4500ms이후에도 나타나지 않으면 에러 발생
+
+#### Queries
+
+##### ByLabelText
+
+ByLabelText는 label이 있는 input의 label 내용으로 input을 선택한다.
+
+```jsx
+<label for="username-input">아이디</label>
+<input id="username-input" />
+
+const inputNode = getByLabelText('아이디')
+```
+
+##### ByPlaceholderText
+
+ByPlaceholderText는 placeholder 값으로 input 및 textarea를 선택한다.
+
+```jsx
+<input placeholder="아이디" />;
+
+const inputNode = getByPlaceholderText('아이디');
+```
+
+##### ByText
+
+ByText는 엘리먼트가 가지고 있는 텍스트 값으로 DOM을 선택한다.
+
+```jsx
+<div>Hello World</div>;
+
+const div = getByText('Hello World');
+```
+
+텍스트 값에 정규식을 넣어도 작동한다.
+
+```js
+const div = getByText(/^Hello/);
+```
+
+##### ByAltText
+
+ByAltText는 alt속성을 가지고 있는 엘리먼트 (주로img)를 선택한다.
+
+```jsx
+<img src="/image.png" alt="good image">
+
+const goodImage = getByAltText('good image')
+```
+
+##### ByTitle
+
+ByTitle은 title속성을 가지고 있는 DOM혹은 title 엘리먼트를 지니고 있는 SVG를 선택할 때 사용한다. title 속성은 html에서 툴팁을 보여줘야 하는 상황에 사용함.
+
+```jsx
+<p>
+  <span title="React">리액트</span>는 좋은 라이브러리
+</p>
+
+<svg>
+  <title>Delete</title>
+  <g><path/></g>
+</svg>
+
+const spanReact = getByTitle('React')
+const svgDelete = getByTitle('Delete')
+```
