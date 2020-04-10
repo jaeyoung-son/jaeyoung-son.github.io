@@ -210,3 +210,119 @@ ByTitle은 title속성을 가지고 있는 DOM혹은 title 엘리먼트를 지�
 const spanReact = getByTitle('React')
 const svgDelete = getByTitle('Delete')
 ```
+
+##### ByDisplayValue
+
+ByDisplayValue 는 input, textarea, select가 지니고 있는 현재값을 가지고 엘리먼트를 선택한다.
+
+```jsx
+<input value="text" />;
+
+const input = getBydisplayValue('text');
+```
+
+##### ByRole
+
+ByRole은 특정 role값을 지니고 있는 엘리먼트를 선택한다.
+
+```jsx
+<span role="button">삭제 </span>;
+
+const spanRemove = getByRole('button');
+```
+
+##### ByTestId
+
+ByTestId는 다른 방법으로 선택하지 못할때 사용하는 방법으로, 특정 DOM에 직접 test할 때 사용할 id를 달아서 선택하는 것을 의미한다.
+
+```jsx
+<div data-testid="commondiv">흔한 div</div>;
+
+const commonDiv = getByTestId('commondiv');
+```
+
+주의할것은 카멜케이스가 아니다 값을 설정할때 data-testid="..."이렇게 설정해야한다. 그리고 다른 방법으로 선택할 수 없을때에만 사용해야한다.
+
+#### 어떤 쿼리를 사용할까?
+
+일단 종류가 너무 많다. 일단 메뉴얼에서는 우선순위에 따라서 사용하는것을 권장하고있다.
+1.getByLabelText
+2.getByPlaceholderText
+3.getByText
+4.getByDisplayValue
+5.getByAltText
+6.getByTitle
+7.getByRole
+8.getByTestId
+
+DOM의 querySelector도 사용할 수 있지만 이는 지양해야한다.
+
+### Counter 컴포넌트 테스트 코드 작성
+
+카운터 컴포넌트 만들기
+
+```jsx
+import React, { useState, useCallback } from 'react';
+
+const Counter = () => {
+  const [number, setNumber] = useState(0);
+
+  const onIncrease = useCallback(() => {
+    setNumber(number + 1);
+  }, [number]);
+
+  const onDecrease = useCallback(() => {
+    setNumber(number - 1);
+  }, [number]);
+
+  return (
+    <div>
+      <h2>{number}</h2>
+      <button onClick={onIncrease}>+1</button>
+      <button onClick={onDecrease}>-1</button>
+    </div>
+  );
+};
+
+export default Counter;
+```
+
+테스트 코드 작성
+
+```js
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react';
+import Counter from './Counter';
+
+describe('<Counter /', () => {
+  it('matches snapshot', () => {
+    const utils = render(<Counter />);
+    expect(utils.container).toMatchSnapshot();
+  });
+  it('has a number and two buttons', () => {
+    const utils = render(<Counter />);
+    //버튼과 숫자가 있는지 확인
+    utils.getByText('0');
+    utils.getByText('+1');
+    utils.getByText('-1');
+  });
+  it('increases', () => {
+    const utils = render(<Counter />);
+    const number = utils.getByText('0');
+    const plusButton = utils.getByText('+1');
+    // 클릭 이벤트 두번 발생시키기
+    fireEvent.click(plusButton);
+    fireEvent.click(plusButton);
+    expect(number).toHaveTextContent('2'); // jest-dom의 확장 matcher
+    expect(number.textContent).toBe('2'); // textContent를 직접 비교
+  });
+  it('decreases', () => {
+    const utils = render(<Counter />);
+    const number = utils.getByText('0');
+    const minusButton = utils.getByText('-1');
+    fireEvent.click(minusButton);
+    fireEvent.click(minusButton);
+    expect(number).toHaveTextContent('-2'); // jest-dom의 확장 matcher
+  });
+});
+```
