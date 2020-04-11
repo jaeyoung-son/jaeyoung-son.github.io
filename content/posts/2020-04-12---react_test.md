@@ -3,7 +3,7 @@ title: '리액트 테스팅'
 date: '2020-04-12T12:10:32.169Z'
 template: 'post'
 draft: false
-slug: '/posts/test_develop/'
+slug: '/posts/react_test_develop/'
 category: 'test'
 description: '테스트 주도 개발하기'
 tags:
@@ -325,4 +325,18 @@ describe('<Counter /', () => {
     expect(number).toHaveTextContent('-2'); // jest-dom의 확장 matcher
   });
 });
+```
+
+#### 이벤트 다루기
+
+여기서 fireEvent()라는 함수를 불러와서 사용했다. 이 함수는 이벤트를 발생시켜준다
+
+```js
+fireEvent.이벤트이름(DOM, 이벤트객체);
+```
+
+클릭 이벤트의 경우 이벤트객체를 넣어주지 않아도 되지만, change같은 이벤트의 경우엔 넣어야한다.
+
+```js
+fireEvent.change(myInput, { target: { value: 'hello world' } });
 ```
