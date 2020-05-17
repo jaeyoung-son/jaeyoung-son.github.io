@@ -64,3 +64,55 @@ JSX는 자바스크립트의 확장 문법이며 XML과 비슷하게 생겼다. 
    ```
 
    이렇게 코드를 작성하게되면 오류가 난다. 하나의 부모로 감싸져있찌않기 때문에
+
+```jsx
+import React, {Fragment} from 'react'
+
+const App = () => {
+  return (
+    <Fragment>
+     <div>안녕</div>
+     <div>감싼요소가 없다</div>
+    <Fragment>
+  )
+}
+
+export default App
+```
+
+불필요한 DOM을 생성하지 않고 Fragment를 사용해서 감쌀 수 있다. 다음과 같이 작성도 가능하다.
+
+```jsx
+import React, {Fragment} from 'react'
+
+const App = () => {
+  return (
+  <>
+    <div>안녕</div>
+    <div>감싼요소가 없다</div>
+  <>
+)
+}
+
+export default App
+```
+
+2. 자바스크립트 표현
+   JSX안에서는 자바스크립트 표현식을 쓸 수 있다. JSX 내부에서 자바스크립트 표현식을 작성하려면 코드를 {}로 감싼ㄷ다.
+
+   ```jsx
+   import React, {Fragment} from 'react'
+
+   const App = () => {
+    const name = '재영'
+
+    return (
+     <>
+       <div>안녕</div>
+       <div>내 이름은 {name}이야</div>
+     <>
+   )
+   }
+
+   export default App
+   ```
