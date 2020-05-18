@@ -116,3 +116,52 @@ export default App
 
    export default App
    ```
+
+3) 연산자 사용
+   JSX내부의 자바스크립트 표현식에서 if문을 사용할 수 없다. 조건에 따라 다른 내용을 렌더링할떄에는
+   if문으로 사전에 값을 설정하거나 {}안에 삼항(조건부) 연산자를 사용한다.
+
+   ```jsx
+   import React, { Fragment } from 'react';
+
+   const App = () => {
+     const name = '재영';
+
+     return (
+       <div>
+         {name === '재영' ? <h1>재영이다</h1> : <h1>재영이가 아니다</h1>}
+       </div>
+     );
+   };
+
+   export default App;
+   ```
+
+   또한 AND 연산자(&&)를 사용이 가능하다.
+
+   ```jsx
+   import React, { Fragment } from 'react';
+
+   const App = () => {
+     const name = '재영';
+
+     return <div>{name === '재영' && <h1>재영이다</h1>}</div>;
+   };
+
+   export default App;
+   ```
+
+   false나 null을 렌더링 할때는 아무것도 나타나지 않는다. 단 0인경우 화면에 나타나며 만약 컴포넌트에서 아무것도 리턴하지 않으면 nothing was returned라는 에러가 나타나니 주의할것.  
+   or 연산자로 오류 방지
+
+   ```jsx
+   import React, { Fragment } from 'react';
+
+   const App = () => {
+     const name = undefined;
+
+     return name || '값이 언디파인드 이다.';
+   };
+
+   export default App;
+   ```
