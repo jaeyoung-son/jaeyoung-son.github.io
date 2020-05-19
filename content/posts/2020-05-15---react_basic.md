@@ -165,3 +165,42 @@ export default App
 
    export default App;
    ```
+
+4. 인라인 스타일링
+   리액트에서 DOM요소에 스타일을 적용할 때는 문자열 형태로 넣는것이 아닌 객체 형태로 넣어주어야 한다. 표기법은 camelCase로 작성해야한다.
+
+   ```jsx
+   import React, { Fragment } from 'react';
+
+   const App = () => {
+     return (
+       <div
+         style={{
+           backgroundColor: 'red'
+         }}
+       >
+         인라인 스타일링
+       </div>
+     );
+   };
+
+   export default App;
+   ```
+
+5. class대신 className
+   일반 HTML에서 클래스를 사용할떄는 class속성을 주지만 class가 아닌 className속성을 준다.
+
+   ```jsx
+   import React, { Fragment } from 'react';
+
+   const App = () => {
+     const name = '재영';
+
+     return <div className="name">클래스네임 주기</div>;
+   };
+
+   export default App;
+   ```
+
+6. 반드시 닫아야하는 태그
+   HTMl코드를 작성할 때 가끔 태그를 닫지 않은 상태로 작성하기도 한다. input경우 <input>이라고만 해도 작동한다. 단 JSX에서는 반드시 태그를 닫아야한다.
