@@ -72,3 +72,47 @@ window.localStorage.removeItem(’key’); // 해당 키 지우기
 window.localStorage.clear(); // 전부 클리어
 ```
 
+### 브라우저의 스토리지 사용가능 검사
+
+로컬스토리지를 지원하는 브라우저는 windows 객체에 localStorage라는 속성이 존재한다. 그러나 여러 이유로 에외가 발생할 수 있는데, 존재하더라도 다양한 브라우저가 로컬스토리지를 비활성화하는 설정을 제공하기 때문에 브라우저가 지원해도 스크립트에서 사용 하지 못할 수 있다.  
+공식적으로 안내해주는 사용 가능한지 여부를 감지하는 함수
+
+```js
+function storageAvailable(type) {
+  var storage;
+  try {
+    storage = window[type];
+    var x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException && // Firefox를 제외한 모든 브라우저
+      (e.code === 22 || // Firefox
+      e.code === 1014 || // Firefox를 제외한 모든 브라우저
+      // 코드가 존재하지 않을 수도 있기 떄문에 이름 필드도 확인
+      e.name === 'QuotaExceededError' || // Firefox
+        e.name === 'NS_ERROR_DOM_QUOTA_REACHED') && // 이미 저장된 것이있는 경우에만 QuotaExceededError를 확인
+      storage &&
+      storage.length !== 0
+    );
+  }
+}
+```
+
+그냥 보기만 해보면 브라우저별로 까다롭다.
+위 함수는 아래와 같이 사용한다.
+
+```js
+if (storageAvailable('localStorage')) {
+  // 사용가능
+} else {
+  // 사용불가능
+}
+```
+
+### 세션 스토리지와 새창(Window.open)
+
+세션 스토리지는 탭 브라우징이나 새로 실행한 브라우저끼리는 별도의 저장 영역이다.
+만약 window.open으로 새 창을 띄운다면 새로운 브라우저 컨텍스트로 인식하여 세션스토리지가 따로 생성,관리되지만 최초 데이터는 복사된다.
